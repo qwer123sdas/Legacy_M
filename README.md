@@ -18,7 +18,7 @@
    
 ## **데이터 베이스 구조**
 
-![ERD](https://cdn.pixabay.com/photo/2019/03/13/08/29/cat-4052454_1280.jpg)
+![ERD](./image/ERD2.jpg)
 
 
 </br>
