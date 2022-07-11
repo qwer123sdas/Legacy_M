@@ -11,7 +11,10 @@
 ## **실행방법**
 
 ```
-여기는 뭘 넣지
+
+POST / events : http://13.124.183.14/travel/events
+GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
+
 
 ```
 ---
