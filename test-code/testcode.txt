@@ -10,6 +10,8 @@ Content-Type: application/json
 "userId": "3ede0ef2-92b7-4817-a5f3-0c575361f745",
 "placeId": "2e4baf1c-5acb-4efb-a1af-eddada31b00f"
 }
+
+
 // content만 수정
 POST http://localhost:8080/travelclub/events
 Content-Type: application/json
@@ -22,6 +24,7 @@ Content-Type: application/json
 "userId": "3ede0ef2-92b7-4817-a5f3-0c575361f745",
 "placeId": "2e4baf1c-5acb-4efb-a1af-eddada31b00f"
 }
+
 
 // AttechedPhoto 전부 삭제
 POST http://localhost:8080/travelclub/events
@@ -36,6 +39,7 @@ Content-Type: application/json
 "placeId": "2e4baf1c-5acb-4efb-a1af-eddada31b00f"
 }
 
+
 // 사진 1장으로 수정
 POST http://localhost:8080/travelclub/events
 Content-Type: application/json
@@ -49,15 +53,16 @@ Content-Type: application/json
 "placeId": "2e4baf1c-5acb-4efb-a1af-eddada31b00f"
 }
 
+
 // 리뷰 삭제
 POST http://localhost:8080/travelclub/events
 Content-Type: application/json
 {
 "type": "REVIEW",
 "action": "DELETE",
-"reviewId": "240a0658-dc5f-4878-9381-ebb7b2667772",
-"userId": "3ede0ef2-92b7-4817-a5f3-0c575361f745",
+"reviewId": "240a0658-dc5f-4878-9381-ebb7b2667772"
 }
+
 
 // 마일리지 확인
 GET http://localhost:8080/travelclub/mileages/3ede0ef2-92b7-4817-a5f3-0c575361f745?page=0
