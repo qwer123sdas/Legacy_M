@@ -4,7 +4,7 @@
 - JAVA 8
 - Spring 5
 - MySQL(8.0)
-- JSP(MyBatis)
+- MyBatis
 
 </br>
 
