@@ -17,9 +17,17 @@ GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
 
 
 ```
+## 테스트 케이스 id
+```
+user_id : 3ede0ef2-92b7-4817-a5f3-0c575361f745, 9ec1ff63-1783-4365-801e-8f09d1e6e1f2
+place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f
+
+
+```
+
 ---
    
-## **데이터 베이스 구조**
+## **ERD**
 
 ![ERD](./image/ERD2.jpg)
 
