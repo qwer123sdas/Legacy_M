@@ -19,7 +19,9 @@ public class MileageController {
 	@GetMapping("mileages/{userId}")
 	public ResponseEntity<MileageResponse> showMileages(@PathVariable String userId, 
 							    @RequestParam(name="page",defaultValue="0") int page) {
+		
 		MileageResponse response = service.selectMileageByUserId(userId, page);
 		return ResponseEntity.ok().body(response);
+		
 	}
 }
