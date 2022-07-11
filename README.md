@@ -1,9 +1,10 @@
-# 트래블 클럽 마일리지 적립 과제
+# 마일리지 적립 과제
 
-## **기술 스택**
+## **기술 환경**
 - JAVA 8
 - Spring 5
-- MySQL(8.0)
+- Tomcat 9.0
+- MySQL(8.0.28)
 - MyBatis
 
 </br>
@@ -11,16 +12,26 @@
 ## **실행방법**
 
 ```
+Spring Legacy Project: git clone https://github.com/qwer123sdas/Mileage_HomeWork.git
+Docker MySQL : docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:8.0.28
+
 POST / events : http://13.124.183.14/travel/events
 GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
 
-위의 해당 경로로 테스트 케이스를 보내면 그에 따른 response를 받을 수 있습니다.
+위의 해당 경로로 테스트 케이스를 보내면 request에 따른 response를 받을 수 있습니다.
 ```
 
 ## 테스트 케이스 id
 ```
-user_id : 3ede0ef2-92b7-4817-a5f3-0c575361f745, 9ec1ff63-1783-4365-801e-8f09d1e6e1f2
-place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f, 7e234855-abee-449a-b632-dc6d366585c5
+user_id : 3ede0ef2-92b7-4817-a5f3-0c575361f745, 
+          9ec1ff63-1783-4365-801e-8f09d1e6e1f1, 
+          9ec1ff63-1783-4365-801e-8f09d1e6e1f2,
+          9ec1ff63-1783-4365-801e-8f09d1e6e1f3,
+          9ec1ff63-1783-4365-801e-8f09d1e6e1f4
+place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f, 
+           7e234855-abee-449a-b632-dc6d366585c5,
+           8f234855-abee-449a-b632-dc6d366585c5,
+           9g234855-abee-449a-b632-dc6d366585c5
 ```
 
 ---
