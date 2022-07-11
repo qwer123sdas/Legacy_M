@@ -33,7 +33,7 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f,
            8f234855-abee-449a-b632-dc6d366585c5,
            9g234855-abee-449a-b632-dc6d366585c5
            
-**※테스트 케이스는 test_case 폴더에 있습니다.**       
+**※테스트 케이스는 test-case 폴더에 있습니다.**       
 ```
 
 ---
