@@ -28,7 +28,12 @@
 			   inserted
 		FROM Point
 		WHERE user_id = #{userId}
-		GROUP BY point_id
+		GROUP BY point_id 
+		<if test="page == 0">  
 		ORDER BY inserted DESC
+		</if>
+		<if test='page != 0'> 
+		ORDER BY inserted DESC LIMIT 0, #{page}
+		</if>
 	</select>
 </mapper>

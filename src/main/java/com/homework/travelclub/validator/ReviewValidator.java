@@ -28,6 +28,7 @@ public class ReviewValidator {
 		
 		// 리뷰 아이디가 없을 때,
 		if(StringUtils.isBlank(request.getReviewId())) {
+			userMapper.insertUserId(request.getUserId());
 			throw new IllegalArgumentException("리뷰 아이디가 입력되지 않았습니다.");
 		}
 		// 해당 유저가 존재하지 않을 때,
