@@ -39,7 +39,7 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f, 7e234855-abee-449a-b632-dc6d366
 ```
 POST / events
 
-Requset로 오는 데이터를 이용하여 리뷰를 추가/수정/삭제하고 이를 처리된 데이터를 각각의 Reivew, Photo, Point 테이블에 저장합니다.
+Requset로 오는 데이터의 type에 따라 리뷰를 추가/수정/삭제하고 이를 처리된 데이터를 각각의 Reivew, Photo, Point 테이블에 저장합니다.
 
 필요한 데이터가 없거나 리뷰 중복과 같이 검증이 필요한 경우, validator을 통해 runtime exception이 일어나게 하여 어떤 오류인지 
 알 수 있도록 했습니다.(Response는 모두 ResponseEntity를 통해 처리했습니다.)
