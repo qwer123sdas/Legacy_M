@@ -13,7 +13,10 @@
 
 ```
 Spring Legacy Project: git clone https://github.com/qwer123sdas/Mileage_HomeWork.git
-Docker MySQL : docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:8.0.28
+
+MySQL : 
+1. ./src/main/resources 안에 있는 2개의 sql을 MySQL에서 실행
+2. docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:8.0.28
 
 POST / events : http://13.124.183.14/travel/events
 GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
@@ -33,7 +36,7 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f,
            8f234855-abee-449a-b632-dc6d366585c5,
            9g234855-abee-449a-b632-dc6d366585c5
            
-**※테스트 케이스는 test-case 폴더에 있습니다.**       
+※ 테스트 케이스는 test-case 폴더에 있습니다.
 ```
 
 ---
@@ -43,7 +46,12 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f,
 ![ERD](./image/ERD.png)
 
 - 모든 id는 pk이고 다른 테이블의 id를 참조할 때, fk를 주어 정규화시켜주었습니다.
-- pk와 fk를 사용하면 자동적으로 유니크 인덱스를 생성하기 때문에, 전체 테이블 스캔이 이루어지지 않도록 했습니다.
+- pk는 자동적으로 유니크 인덱스를 생성하기 때문에, pk만 스캔하도록 하여 전체 테이블 스캔이 이루어지지 않도록 했습니다.
+
+- 만약 fk에 create index를 하기 원한다면 한다면 아래와 같이 실행합니다.
+create index idx_user on Point (user_id);
+create index idx_place on Point (place_id);
+
 
 </br>
 
