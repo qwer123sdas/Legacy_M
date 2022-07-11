@@ -6,11 +6,9 @@ import static com.homework.travelclub.infrastructure.Constants.MOD;
 
 import java.util.Map;
 
-import javax.validation.Valid;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,7 +30,7 @@ public class ReviewController {
 	
 	// 리뷰 쓰기
 	@PostMapping(path="events", produces="text/plain;charset=UTF-8")
-	public ResponseEntity<String> insertReview(@RequestBody @Valid ReviewRequest request) {  // Valid 
+	public ResponseEntity<String> insertReview(@RequestBody ReviewRequest request) {  // Valid 
 		try {
 			if(request.getAction().equals(ADD)) {
 				addService.insertReview(request);
