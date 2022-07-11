@@ -44,6 +44,10 @@ public class ReviewValidator {
 		if(StringUtils.isBlank(request.getContent())) { 
 			throw new IllegalArgumentException("컨텐츠가 존재하지 않습니다.");
 		}
+		// content가 100자 이상일 때
+		if(request.getContent().length() > 100) { 
+			throw new IllegalArgumentException("100자 이상의 후기를 작성하였습니다.");
+		}
 		
 		// 리뷰 중복 체크하기
 		if (StringUtils.equals(ADD, request.getAction())) {
@@ -55,7 +59,6 @@ public class ReviewValidator {
 	
 	// 리뷰 중복 체크하기
 	private void checkDuplication(ReviewRequest request) {
-		System.out.println(reviewMapper.checkDuplication(request));
 		if(reviewMapper.checkDuplication(request)) {
 			throw new IllegalArgumentException("이미 작성한 리뷰가 있습니다.");
 		}
