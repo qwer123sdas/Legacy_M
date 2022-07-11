@@ -20,7 +20,7 @@ GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
 ## 테스트 케이스 id
 ```
 user_id : 3ede0ef2-92b7-4817-a5f3-0c575361f745, 9ec1ff63-1783-4365-801e-8f09d1e6e1f2
-place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f
+place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f, 7e234855-abee-449a-b632-dc6d366585c5
 ```
 
 ---
@@ -39,7 +39,7 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f
 ```
 POST / events
 
-Requset로 오는 데이터를 이용하여 리뷰를 추가/수정/삭제하고 이를 처리된 데이터를 각각의 Reivew, Photo, Point 테이블에 저장합니다.
+Requset로 오는 데이터의 type에 따라 리뷰를 추가/수정/삭제하고 이를 처리된 데이터를 각각의 Reivew, Photo, Point 테이블에 저장합니다.
 
 필요한 데이터가 없거나 리뷰 중복과 같이 검증이 필요한 경우, validator을 통해 runtime exception이 일어나게 하여 어떤 오류인지 
 알 수 있도록 했습니다.(Response는 모두 ResponseEntity를 통해 처리했습니다.)
