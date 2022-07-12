@@ -23,11 +23,10 @@ docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 my
 
 
 ※ 빠르게 결과만 확인
+아래의 경로로 테스트 케이스를 보내면 해당 경로로 테스트 케이스를 보내면 request에 따른 response를 받을 수 있습니다.
 
 POST / events : http://13.124.183.14/travel/events
 GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
-
-위의 해당 경로로 테스트 케이스를 보내면 request에 따른 response를 받을 수 있습니다.
 ```
 
 ## 테스트 케이스 id
