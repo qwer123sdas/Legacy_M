@@ -15,8 +15,14 @@
 Spring Legacy Project: git clone https://github.com/qwer123sdas/Mileage_HomeWork.git
 
 MySQL : 
-1. ./src/main/resources 안에 있는 2개의 sql을 MySQL에서 실행
-2. docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:8.0.28
+1. MySQL 8.0.28을 사용할 경우, 
+./src/main/resources 안에 있는 2개의 sql을 MySQL에서 실행
+
+2. Dokcer을 사용할 경우,
+docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql:8.0.28
+
+
+※ 빠르게 결과만 확인
 
 POST / events : http://13.124.183.14/travel/events
 GET / mileages : http://13.124.183.14/travel/mileages/{user_id}
