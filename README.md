@@ -54,7 +54,7 @@ place_id : 2e4baf1c-5acb-4efb-a1af-eddada31b00f,
 - pk는 자동적으로 유니크 인덱스를 생성하기 때문에, pk만 스캔하도록 하여 전체 테이블 스캔이 이루어지지 않도록 했습니다.
 
 - 만약 fk에 create index를 하기 원한다면 한다면 아래와 같이 실행합니다.
-</
+</br>
 create index idx_user on Point (user_id);
 create index idx_place on Point (place_id);
 
