@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.homework.travelclub.mapper.MileageMapper">
 	<!-- 포인트 적립 & 수정 & 삭제-->
-	<insert id="insertReviewPoint" parameterType="com.homework.travelclub.vo.MileageLog">
+	<insert id="insertReviewPoint" parameterType="com.homework.travelclub.vo.MileageLogVO">
 		INSERT INTO Point(point_id, user_id, review_id, type, point, comment)
    		 VALUES(#{pointId}, #{userId}, #{reviewId}, #{type}, #{point}, #{comment} );
 	</insert>
@@ -18,7 +18,7 @@
 	</select>
 	
 	<!-- 회원 마일리지 로그기록 가져오기 -->
-	<select id="findAll" resultType="com.homework.travelclub.vo.MileageLog">
+	<select id="findAll" resultType="com.homework.travelclub.vo.MileageLogVO">
 		SELECT point_id pointId,
 			   review_id reviewId,
 			   user_id userId,

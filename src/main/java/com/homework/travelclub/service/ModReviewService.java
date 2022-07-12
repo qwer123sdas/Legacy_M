@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.homework.travelclub.mapper.ReviewMapper;
 import com.homework.travelclub.validator.ReviewValidator;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -19,7 +19,7 @@ public class ModReviewService {
 	
 
 	@Transactional
-	public void modReview(ReviewRequest request) {
+	public void modReview(ReviewRequestVO request) {
 		// validator검사
 		validator.validate(request);
 		// content는 당연히 있으니까 패스

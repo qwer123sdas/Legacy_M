@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Data;
 @Data
-public class MileageLog {
+public class MileageLogVO {
 	@Type(type = "uuid-char")
 	private String pointId;
 	
@@ -25,10 +25,10 @@ public class MileageLog {
 	private LocalDateTime inserted;
 	
 	
-	public MileageLog() {
+	public MileageLogVO() {
 		
 	}
-	public MileageLog(int point, String comment, char type, String userId, String reviewId) {
+	public MileageLogVO(int point, String comment, char type, String userId, String reviewId) {
 		this.pointId = UUID.randomUUID().toString();
 		this.point = point;
 		this.comment = comment;

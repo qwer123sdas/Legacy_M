@@ -5,11 +5,11 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class MileageResponse {
+public class MileageResponseVO {
 	private int sum;
-	private List<MileageLog> logs;
+	private List<MileageLogVO> logs;
 	
-	public MileageResponse(int sum, List<MileageLog> logs) {
+	public MileageResponseVO(int sum, List<MileageLogVO> logs) {
 		this.sum = sum;
 		this.logs = logs;
 	}

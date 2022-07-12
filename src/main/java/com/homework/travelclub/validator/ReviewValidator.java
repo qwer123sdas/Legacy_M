@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import com.homework.travelclub.mapper.PlaceMapper;
 import com.homework.travelclub.mapper.ReviewMapper;
 import com.homework.travelclub.mapper.UserMapper;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -20,7 +20,7 @@ public class ReviewValidator {
 	private final PlaceMapper placeMapper;
 	private final ReviewMapper reviewMapper;
 	
-	public void validate(ReviewRequest request) {
+	public void validate(ReviewRequestVO request) {
 		// 타입 확인,
 		if(!StringUtils.equals(REVIEW_TYPE, request.getType())) {
 			throw new IllegalArgumentException("리뷰 타입이 아닙니다.");
@@ -57,7 +57,7 @@ public class ReviewValidator {
 	}
 	
 	// 리뷰 중복 체크하기
-	private void checkDuplication(ReviewRequest request) {
+	private void checkDuplication(ReviewRequestVO request) {
 		if(reviewMapper.checkDuplication(request)) {
 			throw new IllegalArgumentException("이미 작성한 리뷰가 있습니다.");
 		}

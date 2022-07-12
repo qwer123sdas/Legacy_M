@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.homework.travelclub.service.AddReviewService;
 import com.homework.travelclub.service.DeleteReviewService;
 import com.homework.travelclub.service.ModReviewService;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -30,7 +30,7 @@ public class ReviewController {
 	
 	// 리뷰 쓰기
 	@PostMapping(path="events", produces="text/plain;charset=UTF-8")
-	public ResponseEntity<String> insertReview(@RequestBody ReviewRequest request) {  // Valid 
+	public ResponseEntity<String> insertReview(@RequestBody ReviewRequestVO request) {  // Valid 
 		try {
 			if(request.getAction().equals(ADD)) {
 				addService.insertReview(request);

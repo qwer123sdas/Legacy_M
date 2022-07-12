@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.homework.travelclub.mapper.ReviewMapper;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -17,7 +17,7 @@ public class DeleteReviewService {
 	private final ReviewMapper reviewMapper;
 	
 	@Transactional
-	public void deleteReview(ReviewRequest request) {
+	public void deleteReview(ReviewRequestVO request) {
 		// 사진 삭제
 		attachedPhotoService.deleteAttachedPhotoByReviewId(request.getReviewId());
 		// review DELETE로 업데이트

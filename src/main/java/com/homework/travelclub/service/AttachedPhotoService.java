@@ -3,7 +3,7 @@ package com.homework.travelclub.service;
 import org.springframework.stereotype.Service;
 
 import com.homework.travelclub.mapper.AttachedPhotoMapper;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -15,7 +15,7 @@ public class AttachedPhotoService {  // 서비스로
 	
 	// 사진 유효성 + 포인트
 	//ADD
-	public boolean isSatisFiedAddPhoto(ReviewRequest request) {
+	public boolean isSatisFiedAddPhoto(ReviewRequestVO request) {
 		if(request.getAttachedPhotoIds().isEmpty()) {
 			return false;
 		}
@@ -30,7 +30,7 @@ public class AttachedPhotoService {  // 서비스로
 	}
 	
 	//MOD
-	public boolean isSatisfiedModPhoto(ReviewRequest request) {
+	public boolean isSatisfiedModPhoto(ReviewRequestVO request) {
 		
 		// 기존에 사진이 없을 때,
 		if(attachedPhotoMapper.selectOriginReviewAttachedPhotoCount(request.getReviewId()) == 0) {
@@ -74,7 +74,7 @@ public class AttachedPhotoService {  // 서비스로
 	}
 	
 	// 사진 db저장 메소드
-	public void insertAttachedPhoto(ReviewRequest request) {
+	public void insertAttachedPhoto(ReviewRequestVO request) {
 		for(int i = 0; i < request.getAttachedPhotoIds().size(); i++) {
 			attachedPhotoMapper.insertReviewAttechedPhoto(request.getAttachedPhotoIds().get(i), request.getReviewId());
 		}

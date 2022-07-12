@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.homework.travelclub.mapper.PlaceMapper">
 	<!-- 장소 있는지 확인 -->
-	<select id="checkPlaceId" parameterType="com.homework.travelclub.vo.ReviewRequest" resultType="boolean">
+	<select id="checkPlaceId" parameterType="com.homework.travelclub.vo.ReviewRequestVO" resultType="boolean">
 		SELECT IF(COUNT(place_id), 1, 0)
 		FROM Place
 		WHERE place_id = #{placeId}

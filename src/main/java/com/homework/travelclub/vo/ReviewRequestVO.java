@@ -5,7 +5,7 @@ import java.util.List;
 import lombok.Data;
 
 @Data
-public class ReviewRequest {
+public class ReviewRequestVO {
 	
 	private String reviewId;
 	

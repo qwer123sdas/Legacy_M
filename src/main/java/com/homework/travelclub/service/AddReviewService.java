@@ -6,7 +6,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.homework.travelclub.mapper.ReviewMapper;
 import com.homework.travelclub.validator.ReviewValidator;
-import com.homework.travelclub.vo.ReviewRequest;
+import com.homework.travelclub.vo.ReviewRequestVO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -21,7 +21,7 @@ public class AddReviewService {
 	
 	// 리뷰 ADD
 	@Transactional
-	public void insertReview(ReviewRequest request) {
+	public void insertReview(ReviewRequestVO request) {
 		// 해당 장소에 이미 작성한 리뷰가 있는지 확인, exception 처리
 		// 유저가 있는지 없는지는 비지니스 로직
 		reviewValidator.validate(request);
