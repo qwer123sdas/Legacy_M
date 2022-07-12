@@ -12,7 +12,7 @@
 ## **실행방법**
 
 ```
-Spring Legacy Project: git clone https://github.com/qwer123sdas/Mileage_HomeWork.git
+git clone https://github.com/qwer123sdas/Mileage_HomeWork.git
 
 MySQL : 
 1. MySQL 8.0.28을 사용할 경우, 
